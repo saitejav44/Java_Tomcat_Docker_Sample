@@ -8,7 +8,7 @@ pipeline {
             post {
                 success {
                     echo "Now archiving the Artifacts"
-                    archiveArtifacts artifacts: '**/*.war /home/ec2-user/tomcat/webapps'
+                    archiveArtifacts artifacts: '/home/ec2-user/tomcat/webapps/*.war'
                 }
             }
         }
