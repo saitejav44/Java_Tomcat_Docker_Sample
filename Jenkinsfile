@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -latr'
+                sh 'chowm -R ec2-user:ec2-user /var/lib/jenkins/workspace/Build_Tomcat_Docker_Image/*'
                 sh 'docker build . -t tomcatsamplewebapp'
             }
         }
