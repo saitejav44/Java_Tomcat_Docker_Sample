@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -latr'
-                sh 'sudo docker build . -t tomcatsamplewebapp'
+                sh 'docker build . -t tomcatsamplewebapp'
             }
         }
     }
