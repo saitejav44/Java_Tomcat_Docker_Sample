@@ -17,7 +17,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -latr'
                 sh '''
-                    #!/usr/bin/
+                    #!/usr/bin/bash
                     docker build . -t tomcatsamplewebapp:${env.BUILD_ID}
                 '''
             }
