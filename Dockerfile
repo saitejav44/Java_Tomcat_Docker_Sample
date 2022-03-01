@@ -1,6 +1,6 @@
 FROM tomcat:latest
 
-ADD . /home/ec2-user/tomcat/webapps/
+ADD **/*.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
