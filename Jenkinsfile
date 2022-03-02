@@ -19,7 +19,7 @@ pipeline {
                 sh 'docker pull tomcat:latest'
                 sh 'docker run -d --name tomcatsamplewebappcontainer -t tomcat:latest'
                 sh 'sudo docker exec -it tomcatsamplewebappcontainer /bin/bash/'
-                sh 'cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/'
+                sh 'sudo cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/'
                 sh 'ls -latr /usr/local/tomcat/webapps/'
             }
         }
