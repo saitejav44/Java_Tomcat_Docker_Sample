@@ -18,7 +18,7 @@ pipeline {
                 sh 'ls -latr'
                 sh 'docker build . -d --name tomcatsamplewebappcontainer -t tomcatsamplewebappimage'
                 sh 'docker exec -it tomcatsamplewebappcontainer /bin/bash/'
-                sh 'cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
+                sh 'cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/'
             }
         }
     }
