@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -latr'
+                sh 'docker pull tomcat:latest'
                 sh 'docker run -d --name tomcatsamplewebappcontainer -t tomcatsamplewebappimage'
                 sh 'docker exec -it tomcatsamplewebappcontainer /bin/bash/'
                 sh 'cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/'
