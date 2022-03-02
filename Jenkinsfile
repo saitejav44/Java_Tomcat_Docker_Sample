@@ -16,9 +16,10 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -latr'
-                sh 'docker build . --name tomcatsamplewebappcontainer -t tomcatsamplewebappimage'
+                sh 'docker run -d --name tomcatsamplewebappcontainer -t tomcatsamplewebappimage'
                 sh 'docker exec -it tomcatsamplewebappcontainer /bin/bash/'
                 sh 'cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/'
+                sh 'ls -latr /usr/local/tomcat/webapps/'
             }
         }
     }
